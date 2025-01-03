@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Mover : MonoBehaviour
@@ -7,11 +6,16 @@ public class Mover : MonoBehaviour
 
     void Start()
     {
-
+        PrintInstruction();
     }
 
 
     void Update()
+    {
+        MovePlayer();
+    }
+
+    private void MovePlayer()
     {
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float yValue = 0f;
@@ -19,4 +23,12 @@ public class Mover : MonoBehaviour
 
         transform.Translate(xValue, yValue, zValue);
     }
+
+    private static void PrintInstruction()
+    {
+        Debug.Log("hello world");
+        Debug.Log("try to play the game with your pain !");
+        Debug.Log("Bad game !");
+    }
+
 }
