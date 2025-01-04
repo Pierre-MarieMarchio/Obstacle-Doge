@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 40f;
+    [SerializeField] float moveSpeed = 1.0f;
 
-    void Start()
+    private void Start()
     {
         PrintInstruction();
     }
-
 
     void Update()
     {
@@ -30,5 +29,4 @@ public class Mover : MonoBehaviour
         Debug.Log("try to play the game with your pain !");
         Debug.Log("Bad game !");
     }
-
 }

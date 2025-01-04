@@ -15,7 +15,6 @@ class ColorChanger
         if (renderer != null)
         {
             renderer.material.color = targetColor;
-            Debug.Log($"Color changed to {targetColor} on {renderer.gameObject.name}");
         }
         else
         {

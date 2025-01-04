@@ -1,5 +1,5 @@
-using UnityEditor;
 using UnityEngine;
+
 
 public class HitCollision : MonoBehaviour
 {
@@ -19,8 +19,10 @@ public class HitCollision : MonoBehaviour
 
     private void HitOnWall()
     {
-        Debug.Log("Ouchhh! Watch out!");
+
         ChangeColorIfValid();
+        Scorer.TotalHitNumber = 1;
+        Debug.Log($"Ouchhh! Watch out! you have hited {Scorer.TotalHitNumber} time an obstacle");
     }
 
     private void ChangeColorIfValid()
